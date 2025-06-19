@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     environment  {
-        AWS_ACCOUNT_ID = credentials('ACCOUNT_ID')
+        AWS_ACCOUNT_ID = credentials('444215322100')
         AWS_ECR_REPO_NAME = "adservice"
         AWS_DEFAULT_REGION = 'us-east-1'
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/"
