@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/microservices-ecommerce-k8s.git'
+                git branch: 'main', url: 'https://github.com/Sampath-devops25/microservicek8.git'
             }
         }
         stage("Docker Image Build") {
