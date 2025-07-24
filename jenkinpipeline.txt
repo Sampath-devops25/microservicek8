@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    triggers {
+        pollSCM('* * * * *') // polls every minute (optional if using webhook)
+    }
+
+    stages {
+        stage('Git Clone') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-token',
+                    url: 'https://github.com/Sampath-devops25/microservicek8.git'
+            }
+        }
+
+        stage('Change Detected') {
+            steps {
+                echo 'Change detected in repository. Triggered pipeline.'
+            }
+        }
+    }
+}
